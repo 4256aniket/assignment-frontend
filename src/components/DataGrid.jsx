@@ -107,7 +107,6 @@ const DataGrid = ({ apiUrl, data, refresh }) => {
 
   return (
     <div style={{ height: "85vh", padding: "2rem" }}>
-      {/* Search Section */}
       <div style={{ marginBottom: "15px", display: "flex", gap: "10px" }}>
         <TextField
           label="Search"
@@ -121,7 +120,6 @@ const DataGrid = ({ apiUrl, data, refresh }) => {
         </Button>
       </div>
 
-      {/* Filter Section */}
       <div style={{ marginBottom: "15px", display: "flex", gap: "10px" }}>
         <Select
           value={filterColumn}
@@ -139,7 +137,6 @@ const DataGrid = ({ apiUrl, data, refresh }) => {
               );
             })
             .slice(1)}
-          {/* Add other column options dynamically if required */}
         </Select>
 
         <Select
@@ -169,8 +166,6 @@ const DataGrid = ({ apiUrl, data, refresh }) => {
           Filter
         </Button>
       </div>
-
-      {/* Data Grid */}
       <AgGridReact
         rowData={rowData}
         columnDefs={columnDefs}
